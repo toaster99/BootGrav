@@ -1,10 +1,9 @@
+
 # BootGrav for Grav CMS
 ## Grav theme based on Bootstrap example named Carousel: 
 
 
 BootGrav is the simple [Grav](http://getgrav.org) theme based on minimalist Twitter Bootstrap, demo template [Carousel](http://getbootstrap.com/examples/carousel/).
-
-![BootGrav preview](bootgrav-screenshot.png)
 
 # Installation
 

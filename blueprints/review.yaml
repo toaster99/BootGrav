@@ -1,0 +1,30 @@
+title: Review
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        article:
+          type: tab
+          title: Article Options
+
+          fields:
+            header.featured_image:
+              label: Featured Image
+              type: pagemediaselect
+            header.tagline:
+              label: Tagline Text
+              type: text
+            header.rating:
+              label: Rating (out of 3)
+              type: text
+              validate:
+                type: int
+                min: 0
+                max: 3

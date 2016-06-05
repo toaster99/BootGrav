@@ -1,0 +1,25 @@
+{% set background_image = page.media['background.jpg'] %}
+{% set css = page.header.styles %}
+
+<h2>{{ page.title }}</h2>
+<h4>{{ page.content }}</h4>
+<div class="row">
+	{% for page in page.collection %}
+		<div class='col-md-4 featured_review'>
+			<div class="featured_review_image_container">	
+				{% if page.header.tagline %}
+					<span class="featured_review_image_tag">
+						{{ page.header.tagline }}
+					</span>
+				{% endif %}
+				<img src="http://placehold.it/800x400" class="img-responsive featured_review_image">
+			</div>
+
+			{# page.media[page.header.featured_image].cropResize(800,400).html(page.title,'Featured image','img-responsive featured_review_image') #}
+			<h3>{{ page.title }}</h3>
+		</div>
+		
+	{% endfor %}
+</div>
+
+<hr class="featurette-divider" />
