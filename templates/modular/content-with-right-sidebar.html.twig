@@ -1,0 +1,19 @@
+{% set background_image = page.media['background.jpg'] %}
+{% set css = page.header.styles %}
+
+<div class="row">
+	{# Main Content Area #}
+	<div class="col-md-8">
+		Main content
+	{% for module in page.collection() %}
+		LOL
+        {# {% if module.header.title|contains('Slider')%} #}
+        {{ module.content }}
+       {#  {% endif %} #}
+    {% endfor %}
+	</div>
+	{# Sidebar Content #}
+	<div class="col-md-4">
+		Sidebar is here
+	</div>
+</div>

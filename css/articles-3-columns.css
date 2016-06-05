@@ -1,0 +1,104 @@
+/* Featured Reviews Styles */
+
+
+
+/* Card Style */
+.featured_review
+{
+	margin-bottom: 5em;
+}
+
+.featured_review_content
+{
+	height: 100%;
+	margin-bottom: 0px;
+
+	background-color: gray;
+
+	border-style: solid;
+	border-width: 1px;
+	border-color: gray;
+}
+
+@media(min-width: 768px)
+{
+	.featured_reviews_row
+	{
+		display: flex;
+
+	}
+}
+
+
+.featured_review_header
+{
+	position: relative;
+}
+
+.featured_review_image
+{
+
+}
+
+/* Tag Style */
+.featured_review_image_tag
+{
+	position: absolute;
+
+	top: 0px;
+	left:0px;
+	right:0px;
+
+	background-color: red;
+	padding: .5em 1em;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+@media(min-width: 768px)
+{
+	.featured_review_image_tag
+	{
+		top:1em;
+		left: unset;
+		right: unset;
+		padding: 0em 1em;
+	}
+}
+
+/* Font Styling */
+.featured_review_image_tag h4
+{
+	font-weight: bolder;
+	margin: .5em 0;
+}
+
+.featured_review h3
+{
+	margin: 0px;
+	padding: 0px .5em .5em .5em;
+}
+
+
+/*Rating Star Styles*/
+.rating_star_filled:before
+{
+	position: relative;
+	content: "\2605";
+	color: black;
+	font-size: 2em;
+}
+
+.rating_star_empty:before
+{
+	position: relative;
+	content: "\2605";
+	color: white;
+	font-size: 2em;
+}
+
+.featured_review_stars_container
+{
+	padding: 0 .5em;
+}

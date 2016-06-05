@@ -1,0 +1,35 @@
+/*Header Styles*/
+
+/*Container Style*/
+.header
+{
+	padding: 1em 0;	
+	display: flex;
+	align-items: center;
+}
+
+/*Logo Style*/
+.logo_container
+{
+	flex-grow: 2;
+	display: inline-flex;
+	align-items: center;
+}
+
+.logo_container > span
+{
+	font-size: 2em;
+	padding-left: .5em;
+}
+
+/* Hamburger Icon */
+#hamburger_col
+{
+}
+
+#hamburger_icon
+{
+	font-size: 30px;
+	color: #53545B;
+	cursor: pointer;
+}

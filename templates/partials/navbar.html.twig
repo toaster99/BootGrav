@@ -1,0 +1,30 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+  	<div class="navbar_menu hidden-xs ">
+		{% for page in pages.children %}
+			{% if page.visible %}
+			    {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+		    	{% if current_page == '' %}
+			    	<p class="navbar-text"><a href="{{ page.url }}">{{ page.menu }}</a></p>
+		    	{% else %}
+			    	<p class="navbar-text active_page"><a href="{{ page.url }}">{{ page.menu }}</a></p>		    	
+		    	{% endif %}
+			{% endif %}
+		{% endfor %}
+	</div>
+	<div id="navbar_hamburger_menu" class="hidden-sm hidden-md hidden-lg">
+		<ul>
+			{% for page in pages.children %}
+				{% if page.visible %}
+				    {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+				    {% if current_page == '' %}
+				    	<li><a href="{{ page.url }}"><h3>{{ page.menu }}</h3></a></li>
+				    {% else %}
+				    	<li class="active_page"><a href="{{ page.url }}"><h3>{{ page.menu }}</h3></a></li>
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</div>
+  </div>
+</nav>

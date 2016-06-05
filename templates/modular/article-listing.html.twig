@@ -1,0 +1,27 @@
+{% set background_image = page.media['background.jpg'] %}
+{% set css = page.header.styles %}
+
+<h2>{{ page.title }}</h2>
+<h4>{{ page.content }}</h4>
+
+<div class="article_listing_container">
+	{% for page in page.collection %}
+		<div class="row article_row">
+			<div class="col-sm-4 article_row_image">
+			</div>
+			<div class="col-sm-8 article_row_content">
+				<h4>{{ page.header.tagline }}</h4>
+				{% if page.header.rating %}
+					{% for i in 1..page.header.rating %}
+						<span class="rating_star_filled"></span>
+					{% endfor %}
+					{% for i in 1..(3 - page.header.rating) %}
+						<span class="rating_star_empty"></span>
+					{% endfor %}
+				{% endif %}
+				<h3>{{ page.title }}</h3>
+				<p>{{ page.summary }}</p>
+			</div>
+		</div>
+	{% endfor %}
+</div>

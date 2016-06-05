@@ -1,0 +1,46 @@
+/*Navbar Styles*/
+
+/*Container Styles*/
+.navbar
+{
+  min-height: unset;
+  border-style: none;
+}
+
+/*Menu Item Options*/
+.navbar-text
+{
+  margin: .7em 1em;
+}
+
+.navbar-text:first-child
+{
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+.active_page
+{
+	color: red;
+	font-weight: bold;
+}
+
+/* Hamburger Menu Styles */
+#navbar_hamburger_menu
+{
+	background-color: #53545B;
+	color:white;
+	width: 100%;
+	padding: 1em 0em 1em 0em;
+	z-index: 10;
+
+	display: none;
+	position: absolute;
+	left:0px;
+}
+
+#navbar_hamburger_menu li
+{
+	list-style: none;
+	margin: 2em 0;
+}
