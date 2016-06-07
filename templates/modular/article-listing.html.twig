@@ -5,12 +5,23 @@
 <h4>{{ page.content }}</h4>
 
 <div class="article_listing_container">
-	{% for page in page.collection %}
+	{% set collection = page.collection %}
+	{% for page in collection %}
 		<div class="row article_row">
 			<div class="col-sm-4 article_row_image">
+				<picture>
+					<source srcset="http://placehold.it/800x400" media="(max-width: 768px)">
+
+					<img class="img-responsive" src="http://placehold.it/800x800">
+				</picture>
 			</div>
 			<div class="col-sm-8 article_row_content">
-				<h4>{{ page.header.tagline }}</h4>
+				<h3>
+					{% if page.header.tagline %}
+						<small>{{ page.header.tagline }}</small><br/>
+					{%endif %}
+					
+				{{ page.title }}</h3>
 				{% if page.header.rating %}
 					{% for i in 1..page.header.rating %}
 						<span class="rating_star_filled"></span>
@@ -19,9 +30,11 @@
 						<span class="rating_star_empty"></span>
 					{% endfor %}
 				{% endif %}
-				<h3>{{ page.title }}</h3>
 				<p>{{ page.summary }}</p>
 			</div>
 		</div>
 	{% endfor %}
+	{% if config.plugins.pagination.enabled and collection.params.pagination %}
+	    {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+	{% endif %}
 </div>

@@ -1,18 +1,25 @@
 {% set background_image = page.media['background.jpg'] %}
 {% set css = page.header.styles %}
 
-<h2>{{ page.title }}</h2>
-<h4>{{ page.content }}</h4>
+<h2>
+{{ page.title }}<small>{{ page.content }}</small></h2>
 <div class="row featured_reviews_row">
 	{% for page in page.collection %}
 		<div class='col-sm-4 featured_review'>
 			<div class="featured_review_content">
 				<div class="featured_review_image_container">	
 					<div class="featured_review_header">
-						<img src="http://placehold.it/800x600" class="img-responsive featured_review_image">
+						{# <img src="http://placehold.it/800x600" class="img-responsive featured_review_image"> #}
+
+						<picture>
+							<source srcset="http://placehold.it/800x400" media="(max-width: 768px)">
+
+							<img class="img-responsive" src="http://placehold.it/800x600">
+						</picture>
+
 						{% if page.header.tagline %}
 						<span class="featured_review_image_tag">
-							<h4>{{ page.header.tagline }}</h4>
+							<h3><small>{{ page.header.tagline }}</small></h3>
 						</span>
 					{% endif %}
 					</div>

@@ -5,12 +5,15 @@
 {
   min-height: unset;
   border-style: none;
+  background-color: #5D576B;
 }
 
 /*Menu Item Options*/
 .navbar-text
 {
   margin: .7em 1em;
+  color: white !important;
+  font-weight: lighter !important;
 }
 
 .navbar-text:first-child
@@ -21,8 +24,7 @@
 
 .active_page
 {
-	color: red;
-	font-weight: bold;
+	font-weight: bolder !important;
 }
 
 /* Hamburger Menu Styles */

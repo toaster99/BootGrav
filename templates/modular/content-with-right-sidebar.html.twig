@@ -4,9 +4,7 @@
 <div class="row">
 	{# Main Content Area #}
 	<div class="col-md-8">
-		Main content
 	{% for module in page.collection() %}
-		LOL
         {# {% if module.header.title|contains('Slider')%} #}
         {{ module.content }}
        {#  {% endif %} #}
@@ -14,6 +12,5 @@
 	</div>
 	{# Sidebar Content #}
 	<div class="col-md-4">
-		Sidebar is here
 	</div>
 </div>
