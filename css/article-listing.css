@@ -12,7 +12,6 @@
 	margin-bottom: 5em;
 }
 
-
 /* Font Options */
 .article_row_content h4 
 {
@@ -30,7 +29,17 @@
 	margin: 0;
 }
 
+.featured_review_content h3:hover
+{
+	color: #3B1F2B !important;
+}
+
+
 /* Stars */
+.no_stars
+{
+	padding-bottom: .5em;
+}
 .rating_star_filled:before
 {
 	font-size: 1.5em;

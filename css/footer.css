@@ -1,0 +1,67 @@
+	.footer
+{
+	margin-top: 4em;
+	background-color: #5D576B;
+}
+
+.footer > .container
+{
+	padding-top: .5em;
+	padding-bottom: 2em;
+}
+
+@media(min-width: 992px)
+{
+	.footer > .container
+	{
+		/*padding: */
+	}	
+}
+
+.footer a 
+{
+	display: table-cell;
+	height: 1.5em;
+	vertical-align: middle;
+}
+
+.footer a:before
+{
+	display: inline-block;
+	font-family: 'Glyphicons Halflings';
+	content: "\e080";
+	font-size: .7em;
+	color: #3B1F2B;
+	padding-right: .3em;
+
+}
+
+.footer h3
+{
+	color: #749DA0;
+	font-weight: lighter;
+	font-weight: bold;
+}
+.footer ul
+{
+	list-style: none;
+	margin: 0px;
+	padding: 0 0em;
+}
+
+.footer li 
+{
+	color: #3B1F2B;
+	font-weight: lighter;
+	padding: .10em 0;
+}
+
+.footer li:hover
+{
+	color: #749DA0 !important;
+}
+
+.footer p
+{
+	color: #3B1F2B;
+}

@@ -3,12 +3,12 @@
 <nav>
     <ul class="pager">
         {% if pagination.hasPrev %}
-            {% set url =  (pagination.baseURL ~ pagination.params ~ pagination.prevUrl) %}
+            {% set url =  (pagination.fullURL ~ pagination.params ~ pagination.prevUrl) %}
             <li class="next"><a rel="prev" href="{{ url }}">Newer <span aria-hidden="true">&rarr;</span></a></li>
         {% endif %}
 
         {% if pagination.hasNext %}
-            {% set url =  (pagination.baseURL ~ pagination.params ~ pagination.nextUrl) %}
+            {% set url =  (pagination.fullURL ~ pagination.params ~ pagination.nextUrl) %}
             <li class="previous"><a rel="next" href="{{ url }}"><span aria-hidden="true">&larr;</span> Older</a></li>
         {% endif %}
     </ul>

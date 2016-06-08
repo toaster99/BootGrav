@@ -32,3 +32,15 @@ a
 	text-decoration: none !important;
 	font-size: inherit !important;
 }
+
+/* Custom Pager Options */
+.pager li>a
+{
+	background-color: #D7BCE8;
+	color: white !important;
+}
+
+.pager li>a:hover
+{
+	background-color: #8884FF;
+}

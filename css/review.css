@@ -1,0 +1,9 @@
+.review_header
+{
+	position: relative;
+	width: 100%;
+	height: 20em;
+
+	background-image: url('http://placehold.it/1920x1080');
+	background-size: cover;
+}

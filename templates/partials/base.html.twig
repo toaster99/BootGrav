@@ -51,22 +51,16 @@
 
 <body>
 
-<div class="container">
+<div class="container header_container">
     {% include 'partials/header.html.twig' %}
 </div>
 
 {% include 'partials/navbar.html.twig' %}
 
-<div class="container marketing">
+{% block content %}{% endblock %}
 
-    {% block content %}{% endblock %}
-</div>
+{% include 'partials/footer.html.twig' %}
 
-<div class="footer">
-    <div class="container">
-        <p class="text-muted">Theme created with ♥ by <a target="blank" href="http://moreplavec.cz" title="Mořeplavec">Mořeplavec</a>. Bootstrap Theme for <a href="http://getgrav.org">Grav</a></p>. 
-    </div>
-</div>
 </body>
 {% block bottom %}{% endblock %}
 </html>

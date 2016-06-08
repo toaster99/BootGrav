@@ -1,6 +1,6 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default hidden-xs">
   <div class="container">
-  	<div class="navbar_menu hidden-xs ">
+  	<div class="navbar_menu">
 		{% for page in pages.children %}
 			{% if page.visible %}
 			    {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
@@ -12,6 +12,8 @@
 			{% endif %}
 		{% endfor %}
 	</div>
+
+</nav>
 	<div id="navbar_hamburger_menu" class="hidden-sm hidden-md hidden-lg">
 		<ul>
 			{% for page in pages.children %}
@@ -27,4 +29,3 @@
 		</ul>
 	</div>
   </div>
-</nav>

@@ -1,5 +1,13 @@
 {% extends 'partials/base.html.twig' %}
 
+{% block partial_stylesheets %}
+    {% do assets.add('theme://css/review.css',100) %}
+
+    {{ assets.css() }}
+{% endblock %}
+
 {% block content %}
+	<div class="review_header">
+	</div>
     {{ page.content }}
 {% endblock %}

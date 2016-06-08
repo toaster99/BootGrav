@@ -10,13 +10,13 @@
 				<div class="featured_review_image_container">	
 					<div class="featured_review_header">
 						{# <img src="http://placehold.it/800x600" class="img-responsive featured_review_image"> #}
+						<a href="{{ page.url }}">
+							<picture>
+								<source srcset="http://placehold.it/800x400" media="(max-width: 768px)">
 
-						<picture>
-							<source srcset="http://placehold.it/800x400" media="(max-width: 768px)">
-
-							<img class="img-responsive" src="http://placehold.it/800x600">
-						</picture>
-
+								<img class="img-responsive" src="http://placehold.it/800x600">
+							</picture>
+						</a>
 						{% if page.header.tagline %}
 						<span class="featured_review_image_tag">
 							<h3><small>{{ page.header.tagline }}</small></h3>
@@ -40,9 +40,12 @@
 				</div>
 
 				{# page.media[page.header.featured_image].cropResize(800,400).html(page.title,'Featured image','img-responsive featured_review_image') #}
-				<h3>{{ page.title }}</h3>
+				<a href="{{ page.url }}">
+					<h3>{{ page.title }}</h3>
+				</a>
 			</div>
 		</div>
 		
 	{% endfor %}
 </div>
+<hr>

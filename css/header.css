@@ -6,6 +6,22 @@
 	padding: 1em 0;	
 	display: flex;
 	align-items: center;
+	
+}
+
+.header_container
+{
+	background-color: #5D576B;
+	color: white !important;
+}
+
+@media(min-width: 768px)
+{
+	.header_container
+	{
+		background-color: white;
+		color: inherit;
+	}
 }
 
 /*Logo Style*/
@@ -16,11 +32,20 @@
 	align-items: center;
 }
 
-.logo_container > span
+.logo_container > h1
 {
 	font-size: 2em;
-	padding-left: .5em;
-	color: rgb(93, 87, 107);
+	padding: 0 0 0 .5em;
+	margin: 0;
+	color: white;
+}
+
+@media(min-width: 768px)
+{
+	.logo_container > h1
+	{
+		color: rgb(93, 87, 107);
+	}
 }
 
 /* Hamburger Icon */
@@ -31,6 +56,6 @@
 #hamburger_icon
 {
 	font-size: 30px;
-	color: #53545B;
+	color: white;
 	cursor: pointer;
 }
