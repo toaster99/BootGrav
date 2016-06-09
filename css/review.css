@@ -16,7 +16,7 @@
 	background-size: cover;
 	background-position: center;
 
-	margin-bottom: 4em;
+	margin-bottom: 3em;
 }
 
 .review_header_container
@@ -47,4 +47,50 @@
 .review_header_content
 {
 
+}
+
+.review_content .inline-float-left
+{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.review_content .inline-float-right
+{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.review_content .inline-full-width
+{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+@media(min-width: 768px)
+{
+	.review_content .inline-float-left
+	{
+		display: inline-block;
+		float: left;
+		max-width: 40%;
+		height: auto;
+	}
+
+	.review_content .inline-float-right
+	{
+		display: inline-block;
+		float: right;
+		max-width: 40%;
+		height: auto;
+	}
+}
+
+/* Styles for review content text */
+.review_content h2
+{
+	margin-bottom: 1em;
 }
