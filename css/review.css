@@ -12,7 +12,6 @@
 	width: 100%;
 	height: 25em;
 
-	background-image: url('http://placehold.it/1920x1080');
 	background-size: cover;
 	background-position: center;
 
@@ -38,9 +37,14 @@
 {
 	display: table-cell;
 	vertical-align: bottom;
-	padding-bottom: 1em;
+	padding-bottom: .5em;
+	color: white;
 }
 
+.review_header_container h1 > small
+{
+	color: white;
+}
 
 
 /* Styles for the body of the review */
@@ -301,18 +305,5 @@
 	.review_summary .rating_star_filled:before
 	{
 		color: white;
-	}
-}
-
-@media(min-width: 992px)
-{
-	.review_summary .rating_star_filled
-	{
-		font-size:2em;
-	}
-
-	.review_summary .rating_star_empty
-	{
-		font-size:2em;
 	}
 }

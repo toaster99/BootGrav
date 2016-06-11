@@ -18,9 +18,9 @@
 			<div class="col-sm-4 article_row_image">
 				<a href="{{ page.url }}">
 					<picture>
-						<source srcset="http://placehold.it/800x400" media="(max-width: 768px)">
+						<source srcset="{{  page.media[page.header.featured_image].cropZoom(800,400).url  }}" media="(max-width: 768px)">
 
-						<img class="img-responsive" src="http://placehold.it/800x800">
+						<img class="img-responsive" src="{{  page.media[page.header.featured_image].cropZoom(800,800).url  }}">
 					</picture>
 				</a>
 			</div>

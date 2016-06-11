@@ -1,58 +1,68 @@
 {# {% set background_image = page.media['background.jpg'] %}
 {% set css = page.header.styles %} #}
 
-{% if page.header.modular_title %}
-	<h2>
-		{{ page.header.modular_title }}
-		{% if page.header.modular_description %}
-			<br/>
-			<small>{{ page.header.modular_description }}</small>
-		{% endif %}
-	</h2>
-{% endif %}
+{% do assets.add('theme://css/slick.css',100) %}
+{% do assets.add('theme://js/slick.min.js') %}
+{% do assets.add('theme://js/articles-3-columns.js') %}
 
-<div class="row featured_reviews_row">
-	{% for page in page.collection %}
-		<div class='col-sm-4 featured_review'>
-			<div class="featured_review_content">
-				<div class="featured_review_image_container">	
-					<div class="featured_review_header">
-						{# <img src="http://placehold.it/800x600" class="img-responsive featured_review_image"> #}
-						<a href="{{ page.url }}">
-							<picture>
-								<source srcset="http://placehold.it/800x400" media="(max-width: 768px)">
+{{ assets.css() }}
+{{ assets.js() }}
 
-								<img class="img-responsive" src="http://placehold.it/800x600">
-							</picture>
-						</a>
-						{% if page.header.tagline %}
-						<span class="featured_review_image_tag">
-							<h3><small>{{ page.header.tagline }}</small></h3>
-						</span>
-					{% endif %}
-					</div>
-					<div class="featured_review_stars_container">
-						{% if page.header.rating %}
-							{% for i in 1..page.header.rating %}
-								<span class="rating_star_filled"></span>
-							{% endfor %}
-							{% for i in 1..(3 - page.header.rating) %}
-								<span class="rating_star_empty"></span>
-							{% endfor %}
-						{% else %}
-							{% for i in 1..3 %}
-								<span class="rating_star_empty"></span>
-							{% endfor %}
+
+<div class="container marketing">
+	{% if page.header.modular_title %}
+		<h2>
+			{{ page.header.modular_title }}
+			{% if page.header.modular_description %}
+				<br/>
+				<small>{{ page.header.modular_description }}</small>
+			{% endif %}
+		</h2>
+	{% endif %}
+
+	<div class="row featured_reviews_row">
+	{# <div class="featured_reviews_row"> #}
+		{% for page in page.collection %}
+			<div class='col-sm-4 featured_review'>
+			{# <div class="featured_review"> #}
+				<div class="featured_review_content">
+					<div class="featured_review_image_container">	
+						<div class="featured_review_header">
+							<a href="{{ page.url }}">
+								<picture>
+									<source srcset="{{ page.media[page.header.featured_image].cropZoom(800,500).url }} " media="(max-width: 768px)">
+
+									<img class="img-responsive" src="{{ page.media[page.header.featured_image].cropZoom(800,600).url }}">
+								</picture>
+							</a>
+							{% if page.header.tagline %}
+							<span class="featured_review_image_tag">
+								<h3><small>{{ page.header.tagline }}</small></h3>
+							</span>
 						{% endif %}
+						</div>
+						<div class="featured_review_stars_container">
+							{% if page.header.rating %}
+								{% for i in 1..page.header.rating %}
+									<span class="rating_star_filled"></span>
+								{% endfor %}
+								{% for i in 1..(3 - page.header.rating) %}
+									<span class="rating_star_empty"></span>
+								{% endfor %}
+							{% else %}
+								{% for i in 1..3 %}
+									<span class="rating_star_empty"></span>
+								{% endfor %}
+							{% endif %}
+						</div>
 					</div>
-				</div>
 
-				{# page.media[page.header.featured_image].cropResize(800,400).html(page.title,'Featured image','img-responsive featured_review_image') #}
-				<a href="{{ page.url }}">
-					<h3>{{ page.title }}</h3>
-				</a>
+					{# page.media[page.header.featured_image].cropResize(800,400).html(page.title,'Featured image','img-responsive featured_review_image') #}
+					<a href="{{ page.url }}">
+						<h3>{{ page.title }}</h3>
+					</a>
+				</div>
 			</div>
-		</div>
-		
-	{% endfor %}
+		{% endfor %}
+	</div>
 </div>

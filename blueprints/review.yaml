@@ -31,3 +31,28 @@ form:
             header.quick_summary:
               label: Summary
               type: textarea
+            header.pros:
+              label: Pros
+              type: list
+              fields:
+                  .pro:
+                    type: textarea
+                    label: Pro
+            header.cons:
+              label: Cons
+              type: list
+              fields:
+                  .con:
+                    type: textarea
+                    label: Con
+            header.affiliate_links:
+              label: Affiliate Links
+              type: list
+              name: affiliate_links
+              fields:
+                .title:
+                  type: text
+                  label: Button Text
+                .url:
+                  type: text
+                  label: Link

@@ -1,19 +1,28 @@
 {% extends 'partials/base.html.twig' %}
 
+{% block specific_includes %}
+	{% do assets.add('theme://js/parallax.min.js') %}
+	{% do assets.add('theme://js/review.js') %}
+	{{ assets.js() }}
+{% endblock %}
+
+
+
 
 {% block content %}
-	<div class="review_header">
+	{% if page.header.featured_image %}
+		<div class="review_header"data-parallax="scroll" data-image-src="{{ page.media[page.header.featured_image].url }}">
 
-			<div class="container review_header_container">
-				<div class="review_header_content">
-					<h1>
-						<small>Title of the stuff</small><br/>
-						This is a test
-					</h1>
+				<div class="container review_header_container">
+					<div class="review_header_content">
+						<h1>
+							<small>Title of the stuff</small><br/>
+							This is a test
+						</h1>
+					</div>
 				</div>
-			</div>
-
-	</div>
+		</div>
+	{% endif %}
 	<div class="container review_content">
     	{{ page.content }}
     </div>
@@ -36,39 +45,40 @@
 							{% endif %}
 						</div>
 						<div class="col-sm-4">
-							<h2>Pros</h2>
-							<ul>
-								<li>Amazing price</li>
-								<li>Great picture quality</li>
-								<li>Unique design</li>
-							</ul>
+							{% if page.header.pros %}
+								<h2>Pros</h2>
+								<ul>
+									{% for pro in page.header.pros %}
+										<li>{{ pro.pro }}</li>
+									{% endfor %}
+								</ul>
+							{% endif %}
 						</div>
 						<div class="col-sm-4">
-							<h2>Cons</h2>
-							<ul>
-								{% for con in page.header.cons %}
-								<li>Chinese interface</li>
-								<li>Slow startup</li>
-								<li>Terrible support</li>
-								{% endfor %}
-							</ul>
+							{% if page.header.cons %}
+								<h2>Cons</h2>
+								<ul>
+									{% for con in page.header.cons %}
+										<li>{{ con.con }}</li>
+									{% endfor %}
+								</ul>
+							{% endif %}
 						</div>
 					</div>
 	    		</div>
 	    		<div class="review_summary_purchase">
-	    			<h2>See It On</h2>
-	    			<ul>
-	    				<a href="#" style="float:none;">
-			    			<li>
-			    				Amazon
-			    			</li>
-			    		</a>
-			    		<a href="#">
-			    			<li>
-			    				TinyDeals
-			    			</li>
-			    		</a>
-	    			</ul>
+	    			{% if page.header.affiliate_links %}
+		    			<h2>See It On</h2>
+		    			<ul>
+		    				{% for link in page.header.affiliate_links %}
+			    				<a href="{{ link.url }}" style="float:none;" target="_blank">
+					    			<li>
+					    				{{ link.title }}
+					    			</li>
+					    		</a>
+					    	{% endfor %}
+		    			</ul>
+		    		{% endif %}
 	    		</div>
 	    	</div>
 	    </div>

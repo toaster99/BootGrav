@@ -42,6 +42,7 @@
                 {% do assets.add('https://oss.maxcdn.com/respond/1.4.2/respond.min.js') %}
             {% endif %}
 
+            {% do assets.add('theme://js/parallax.min.js') %}
             {% do assets.add('theme://js/navbar.js') %}
 
             {{ assets.js() }}
