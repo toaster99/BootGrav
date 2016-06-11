@@ -21,8 +21,11 @@ form:
                   @data-options: '\Grav\Common\Page\Pages::modularTypes'
         styles:
           type: tab
-          title: Row Style
+          title: Section Settings
           fields:
-            header.styles:
+            header.modular_title:
               type: textarea
-              label: CSS Classes
+              label: Section Title
+            header.modular_description:
+              type: textarea
+              label: Section Descrption

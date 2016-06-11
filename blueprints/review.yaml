@@ -28,3 +28,6 @@ form:
                 type: int
                 min: 0
                 max: 3
+            header.quick_summary:
+              label: Summary
+              type: textarea

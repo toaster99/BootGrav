@@ -1,8 +1,16 @@
-{% set background_image = page.media['background.jpg'] %}
-{% set css = page.header.styles %}
+{# {% set background_image = page.media['background.jpg'] %}
+{% set css = page.header.styles %} #}
 
-<h2>
-{{ page.title }}<small>{{ page.content }}</small></h2>
+{% if page.header.modular_title %}
+	<h2>
+		{{ page.header.modular_title }}
+		{% if page.header.modular_description %}
+			<br/>
+			<small>{{ page.header.modular_description }}</small>
+		{% endif %}
+	</h2>
+{% endif %}
+
 <div class="row featured_reviews_row">
 	{% for page in page.collection %}
 		<div class='col-sm-4 featured_review'>
@@ -48,4 +56,3 @@
 		
 	{% endfor %}
 </div>
-<hr>

@@ -1,8 +1,15 @@
 {% set background_image = page.media['background.jpg'] %}
 {% set css = page.header.styles %}
 
-<h2>{{ page.title }}</h2>
-<h4>{{ page.content }}</h4>
+{% if page.header.modular_title %}
+	<h2>
+		{{ page.header.modular_title }}
+		{% if page.header.modular_description %}
+			<br/>
+			<small>{{ page.header.modular_description }}</small>
+		{% endif %}
+	</h2>
+{% endif %}
 
 <div class="article_listing_container">
 	{% set collection = page.collection %}
@@ -37,7 +44,7 @@
 				{% else %}
 					<div class="no_stars"></div>
 				{% endif %}
-				<p>{{ page.summary }}</p>
+				<p>{{ page.header.quick_summary }}</p>
 			</div>
 		</div>
 	{% endfor %}
