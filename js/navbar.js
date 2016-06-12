@@ -24,6 +24,7 @@ $(document).ready(function()
   //Setup the hamburger menu
   $("#hamburger_icon").click(function()
   {
+
     $("#navbar_hamburger_menu").slideToggle("slow");
   });
 });

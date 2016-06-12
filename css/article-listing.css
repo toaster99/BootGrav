@@ -7,13 +7,18 @@
 	margin-top: 2em;
 }
 
+.article_listing_container hr
+{
+	background-color: #D7BCE8;
+}
+
 .article_row
 {
-	margin-bottom: 5em;
+	/*margin-bottom: 5em;*/
 }
 
 /* Font Options */
-.article_row_content h4 
+.article_row_content h4
 {
 	padding: 0;
 	margin: 0;
@@ -23,7 +28,7 @@
 	padding: 0;
 	margin: 0;
 }
-.article_row_content p 
+.article_row_content p
 {
 	padding: 0;
 	margin: 0;

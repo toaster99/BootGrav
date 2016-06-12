@@ -29,7 +29,7 @@
 					{% if page.header.tagline %}
 						<small>{{ page.header.tagline }}</small><br/>
 					{%endif %}
-					
+
 					<a href="{{ page.title }}">
 						{{ page.title }}
 					</a>
@@ -47,6 +47,7 @@
 				<p>{{ page.header.quick_summary }}</p>
 			</div>
 		</div>
+		<hr>
 	{% endfor %}
 	{% if config.plugins.pagination.enabled and collection.params.pagination %}
 	    {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}

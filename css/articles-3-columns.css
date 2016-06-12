@@ -1,6 +1,25 @@
 /* Featured Reviews Styles */
 
+/* Container Styling */
+@media(min-width: 768px)
+{
+	.featured_review_inner_container
+	{
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+	}
+}
 
+@media(max-width: 768px)
+{
+	.featured_reviews_container
+	{
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+	}
+}
 
 /* Card Style */
 .featured_review

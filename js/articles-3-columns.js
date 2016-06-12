@@ -40,7 +40,7 @@ $(document).ready(function()
 
 	 $('.featured_reviews_row').on('afterChange', function(slick, currentSlide)
 	 {
-	 	currentSlide.$dots.children().removeClass('slick-active');
+	 	// currentSlide.$dots.children().removeClass('slick-active');
 	 	$($(currentSlide.$dots[currentSlide.currentSlide]).children()[currentSlide.currentSlide]).addClass('slick-active');
 	 });
 
