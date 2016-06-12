@@ -7,4 +7,19 @@
         <span id="hamburger_icon" class="hidden-sm hidden-md hidden-lg glyphicon glyphicon-menu-hamburger">
         </span>
     </div>
+    <div class="navigation_col hidden-xs">
+      <ul>
+        {% for page in pages.children %}
+          {% if page.visible %}
+            <li>
+              {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+              {% if current_page == '' %}
+                <a href="{{ page.url }}">{{ page.menu }}</a>
+              {% else %}
+                <a class="active-link" href="{{ page.url }}">{{ page.menu }}</a>
+              {% endif %}
+            </li>
+          {% endif %}
+        {% endfor %}
+    </div>
 </div>

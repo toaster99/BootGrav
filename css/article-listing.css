@@ -10,11 +10,12 @@
 .article_listing_container hr
 {
 	background-color: #D7BCE8;
+	height: 1px;
 }
 
 .article_row
 {
-	/*margin-bottom: 5em;*/
+	margin-bottom: 5em;
 }
 
 /* Font Options */
@@ -45,12 +46,13 @@
 {
 	padding-bottom: .5em;
 }
-.rating_star_filled:before
+.article_listing_container .rating_star_filled:before
 {
 	font-size: 1.5em;
+	color: #8884FF !important;
 }
 
-.rating_star_empty:before
+.article_listing_container .rating_star_empty:before
 {
 	font-size: 1.5em;
 }

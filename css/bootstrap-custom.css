@@ -1,17 +1,35 @@
 /* Container Style */
 body
 {
+	font-family: 'Open Sans', sans-serif;
 }
 
 .container
 {
-	font-size: 14px;
-	
+	font-size: 16px;
 }
 
 h1
 {
 	font-size: 3em;
+}
+
+h2
+{
+	font-weight: bolder;
+	margin-bottom: 1em;
+}
+
+h3
+{
+	font-size: 1.5em;
+	line-height: 1.5em;
+	font-weight: bolder;
+}
+
+h3 small {
+	font-weight: bolder;
+	font-size: .8em;
 }
 
 h4
@@ -21,7 +39,8 @@ h4
 
 p
 {
-	font-size: 1.2em;
+	font-size: 1.3em;
+	line-height: 1.5em;
 	color: #5D576B;
 }
 
@@ -37,7 +56,7 @@ p
 {
 	.container
 	{
-		font-size: 16px;
+		font-size: 13px;
 	}
 }
 

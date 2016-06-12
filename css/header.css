@@ -3,10 +3,10 @@
 /*Container Style*/
 .header
 {
-	padding: 1em 0;	
+	padding: 1em 0;
 	display: flex;
 	align-items: center;
-	
+	margin: 1em 0;
 }
 
 .header_container
@@ -58,4 +58,25 @@
 	font-size: 30px;
 	color: white;
 	cursor: pointer;
+}
+
+/* Header Navigation */
+.navigation_col ul {
+	list-style: none;
+	color: rgb(93, 87, 107);
+	font-weight: bold;
+	display: flex;
+	font-size: 1.2em;
+}
+
+.navigation_col ul > li {
+	margin-left: 1.5em;
+}
+
+.navigation_col li:hover {
+	color: #749DA0 !important;
+}
+
+.navigation_col .active-link {
+	color: #8884FF !important;
 }

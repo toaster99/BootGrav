@@ -1,0 +1,171 @@
+/* Featured Reviews Styles */
+
+/* Container Styling */
+@media(min-width: 768px)
+{
+	.featured_reviews_outer_container_alternative
+	{
+		background-color: #8884FF;
+		padding: .5em 0;
+		margin-bottom: 4em;
+	}
+}
+
+@media(max-width: 768px)
+{
+	.featured_reviews_container_alternative
+	{
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+		overflow: hidden;
+	}
+}
+
+/* Card Style */
+.featured_review_alternative
+{
+	margin-bottom: 2em;
+}
+
+.featured_review_content_alternative
+{
+	height: 100%;
+	margin-bottom: 0px;
+}
+
+@media(min-width: 768px)
+{
+	.featured_reviews_row_alternative
+	{
+		display: flex;
+	}
+}
+
+.featured_review_image_container_alternative
+{
+	position: relative;
+}
+
+.no_header_spacer
+{
+	margin-bottom: 1.5em;
+}
+
+.featured_review_content_alternative
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+
+	padding: .5em;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	z-index: 110;
+	pointer-events: none;
+}
+
+.featured_review_image_darkener_alternative
+{
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	content: "";
+	background-color: black;
+	opacity: 0.6;
+	z-index: 80;
+
+	cursor: pointer;
+}
+
+.featured_review_image_darkener_alternative:hover {
+	opacity: .8;
+}
+
+/* Carousel Styles */
+.featured_reviews_row_alternative .slick-dots
+{
+	list-style: none;
+	display: flex !important;
+	justify-content: center;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+
+	position: absolute;
+	bottom: -.2em;
+	z-index: 100;
+	pointer-events: initial;
+
+	z-index: 150;
+}
+
+.featured_reviews_row_alternative .slick-dots button
+{
+	background-color: unset;
+	border: unset;
+	color: transparent;
+	height: 0px;
+	/*width: 0px;*/
+}
+
+.featured_reviews_row_alternative .slick-dots button:before
+{
+	content:"•";
+	display: block;
+	padding: .3em;
+	color: #23527c;
+	font-weight: bolder;
+	font-size: 2em;
+}
+
+.featured_reviews_row_alternative .slick-dots .slick-active button:before
+{
+	color: white !important;
+}
+
+/* Font Styling */
+.featured_review_alternative h3
+{
+	text-align: center;
+	margin: 0px;
+	color: white;
+}
+
+.featured_review_alternative small
+{
+	text-align: center;
+	margin: 0px;
+	color: #8884FF !important;
+	font-weight: bolder;
+}
+
+
+
+/*Rating Star Styles*/
+.featured_reviews_row_alternative .rating_star_filled:before
+{
+	position: relative;
+	content: "\2605";
+	color: white;
+	font-size: 2em;
+	line-height: 1em;
+}
+
+.featured_reviews_row_alternative .rating_star_empty:before
+{
+	position: relative;
+	content: "\2605";
+	color: #A7A7A7;
+	font-size: 2em;
+	line-height: 1em;
+}

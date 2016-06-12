@@ -8,8 +8,7 @@
 {{ assets.css() }}
 {{ assets.js() }}
 
-
-<div class="container marketing featured_reviews_container">
+<div class="container featured_reviews_container">
 	{% if page.header.modular_title %}
 		<h2 class=" hidden-xs">
 			{{ page.header.modular_title }}
@@ -18,6 +17,8 @@
 				<small>{{ page.header.modular_description }}</small>
 			{% endif %}
 		</h2>
+	{% else %}
+		<div class="no_header_spacer"></div>
 	{% endif %}
 
 	<div class="row featured_reviews_row">

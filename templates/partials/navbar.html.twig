@@ -1,19 +1,19 @@
-<nav class="navbar navbar-default hidden-xs">
+<!-- <nav class="navbar navbar-default hidden-xs"> -->
   <div class="container">
-  	<div class="navbar_menu">
+  	<!-- <div class="navbar_menu">
 		{% for page in pages.children %}
 			{% if page.visible %}
 			    {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
 		    	{% if current_page == '' %}
 			    	<p class="navbar-text"><a href="{{ page.url }}">{{ page.menu }}</a></p>
 		    	{% else %}
-			    	<p class="navbar-text active_page"><a href="{{ page.url }}">{{ page.menu }}</a></p>		    	
+			    	<p class="navbar-text active_page"><a href="{{ page.url }}">{{ page.menu }}</a></p>
 		    	{% endif %}
 			{% endif %}
 		{% endfor %}
 	</div>
 
-</nav>
+</nav> -->
 	<div id="navbar_hamburger_menu" class="hidden-sm hidden-md hidden-lg">
 		<ul>
 			{% for page in pages.children %}

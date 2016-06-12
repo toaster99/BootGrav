@@ -18,6 +18,7 @@
 		width: 100%;
 		margin: 0px;
 		padding: 0px;
+		overflow: hidden;
 	}
 }
 
@@ -38,7 +39,6 @@
 	.featured_reviews_row
 	{
 		display: flex;
-
 	}
 }
 
@@ -50,6 +50,11 @@
 .article_row_content a:hover
 {
 	color: #3B1F2B !important;
+}
+
+.no_header_spacer
+{
+	margin-bottom: 1.5em;
 }
 
 /* Carousel Styles */

@@ -1,0 +1,31 @@
+title: Row
+@extends: default
+
+form:
+  fields:
+    tabs:
+      fields:
+        advanced:
+          fields:
+            columns:
+              fields:
+                column1:
+                  fields:
+                    name:
+                      default: modular/row
+                      @data-options: '\Grav\Common\Page\Pages::modularTypes'
+            overrides:
+              fields:
+                header.template:
+                  default: modular/row
+                  @data-options: '\Grav\Common\Page\Pages::modularTypes'
+        styles:
+          type: tab
+          title: Section Settings
+          fields:
+            header.modular_title:
+              type: textarea
+              label: Section Title
+            header.modular_description:
+              type: textarea
+              label: Section Descrption

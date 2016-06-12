@@ -47,7 +47,7 @@
 				<p>{{ page.header.quick_summary }}</p>
 			</div>
 		</div>
-		<hr>
+		<!-- <hr> -->
 	{% endfor %}
 	{% if config.plugins.pagination.enabled and collection.params.pagination %}
 	    {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}

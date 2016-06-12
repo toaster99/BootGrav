@@ -1,0 +1,59 @@
+{# {% set background_image = page.media['background.jpg'] %}
+{% set css = page.header.styles %} #}
+
+<div class="featured_reviews_outer_container_alternative">
+	<div class="container featured_reviews_container_alternative">
+		{% if page.header.modular_title %}
+			<h2 class=" hidden-xs">
+				{{ page.header.modular_title }}
+				{% if page.header.modular_description %}
+					<br/>
+					<small>{{ page.header.modular_description }}</small>
+				{% endif %}
+			</h2>
+		{% else %}
+			<div class="no_header_spacer hidden-xs"></div>
+		{% endif %}
+
+		<div class="row featured_reviews_row_alternative">
+			{% for page in page.collection %}
+				<div class='col-sm-4 featured_review_alternative'>
+					<a href="{{ page.url }}">
+					<div class="featured_review_image_container_alternative">
+								<div class="featured_review_image">
+									<picture >
+										<source srcset="{{ page.media[page.header.featured_image].cropZoom(800,600).url }} " media="(max-width: 768px)">
+
+										<img class="img-responsive" src="{{ page.media[page.header.featured_image].cropZoom(800,600).url }}">
+									</picture>
+								</div>
+								<div class="featured_review_image_darkener_alternative">
+
+								</div>
+								<div class="featured_review_content_alternative">
+									{% if page.header.tagline %}
+										<h3><small>{{ page.header.tagline }}</small></h3>
+									{% endif %}
+									<h3>{{ page.title }}</h3>
+									<div class="featured_review_stars_container">
+										{% if page.header.rating %}
+										{% for i in 1..page.header.rating %}
+										<span class="rating_star_filled"></span>
+										{% endfor %}
+										{% for i in 1..(3 - page.header.rating) %}
+										<span class="rating_star_empty"></span>
+										{% endfor %}
+										{% else %}
+										{% for i in 1..3 %}
+										<span class="rating_star_empty"></span>
+										{% endfor %}
+										{% endif %}
+									</div>
+								</div>
+						</div>
+					</a>
+					</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
