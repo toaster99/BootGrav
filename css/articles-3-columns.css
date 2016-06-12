@@ -33,6 +33,54 @@
 	color: #3B1F2B !important;
 }
 
+/* Carousel Styles */
+.slick-dots
+{
+	list-style: none;
+	display: flex !important;
+	justify-content: center;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+
+	position: absolute;
+	bottom: .2em;
+	z-index: 100;
+	pointer-events: initial;
+}
+
+.slick-dots button
+{
+	background-color: unset;
+	border: unset;
+	color: transparent;
+	height: 0px;
+	/*width: 0px;*/
+}
+
+.slick-dots button:before
+{
+	content:"•";
+	display: block;
+	padding: .3em;
+	color: white;
+	font-weight: bolder;
+	font-size: 2em;
+}
+
+.slick-dots .slick-active button:before
+{
+	color: #8884FF !important;
+}
+
+@media(min-width: 768px)
+{
+	.slick-dots button:before
+	{
+		color: #D7BCE8;
+	}
+}
+
 /* Tag Style */
 .featured_review_image_tag
 {

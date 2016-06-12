@@ -1,7 +1,8 @@
 $(document).ready(function()
 {
 	 $('.featured_reviews_row').slick({
-		  dots: false,
+		  dots: true,
+		  arrows: false,
 		  infinite: true,
 		  speed: 300,
 		  autoplay: true,
@@ -27,7 +28,8 @@ $(document).ready(function()
 		      breakpoint: 768,
 		      settings: {
 		        slidesToShow: 1,
-		        slidesToScroll: 1
+		        slidesToScroll: 1,
+		        appendDots: $(".featured_review_image")
 		      }
 		    }
 		    // You can unslick at a given breakpoint now by adding:
@@ -35,4 +37,11 @@ $(document).ready(function()
 		    // instead of a settings object
 		  ]
 	});
+
+	 $('.featured_reviews_row').on('afterChange', function(slick, currentSlide)
+	 {
+	 	currentSlide.$dots.children().removeClass('slick-active');
+	 	$($(currentSlide.$dots[currentSlide.currentSlide]).children()[currentSlide.currentSlide]).addClass('slick-active');
+	 });
+
 });

@@ -28,13 +28,15 @@
 				<div class="featured_review_content">
 					<div class="featured_review_image_container">	
 						<div class="featured_review_header">
-							<a href="{{ page.url }}">
-								<picture>
-									<source srcset="{{ page.media[page.header.featured_image].cropZoom(800,500).url }} " media="(max-width: 768px)">
+							<div class="featured_review_image">
+								<a href="{{ page.url }}">
+									<picture >
+										<source srcset="{{ page.media[page.header.featured_image].cropZoom(800,500).url }} " media="(max-width: 768px)">
 
-									<img class="img-responsive" src="{{ page.media[page.header.featured_image].cropZoom(800,600).url }}">
-								</picture>
-							</a>
+										<img class="img-responsive" src="{{ page.media[page.header.featured_image].cropZoom(800,600).url }}">
+									</picture>
+								</a>
+							</div>
 							{% if page.header.tagline %}
 							<span class="featured_review_image_tag">
 								<h3><small>{{ page.header.tagline }}</small></h3>
