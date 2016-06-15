@@ -3,11 +3,11 @@
 
 {% if page.header.modular_title %}
 	<h2>
-		{{ page.header.modular_title }}
 		{% if page.header.modular_description %}
-			<br/>
-			<small>{{ page.header.modular_description }}</small>
+		<br/>
+		<small>{{ page.header.modular_description }}</small><br />
 		{% endif %}
+		{{ page.header.modular_title }}
 	</h2>
 {% endif %}
 
