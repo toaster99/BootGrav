@@ -1,0 +1,47 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block specific_includes %}
+	{% do assets.add('theme://js/parallax.min.js') %}
+	{% do assets.add('theme://js/review.js') %}
+	{{ assets.js() }}
+{% endblock %}
+
+
+
+
+{% block content %}
+	{% if page.header.featured_image %}
+		<div class="review_header"data-parallax="scroll" data-image-src="{{ page.media[page.header.featured_image].url }}">
+
+				<div class="container review_header_container">
+					<div class="review_header_content">
+						<h1>
+							<small>{{ page.header.article_page_tagline }}</small><br/>
+							{{ page.header.title }}
+						</h1>
+					</div>
+				</div>
+		</div>
+	{% else %}
+		<div class="review_title_container">
+			<div class="container">
+				<h1>
+					{{ page.title }}
+				</h1>
+				{% if page.header.article_page_tagline %}
+					<p>
+						{{ page.header.article_page_tagline }}
+					</p>
+				{% endif %}
+			</div>
+		</div>
+	{% endif %}
+
+	<div class="container review_content">
+    	{{ page.content }}
+    </div>
+    <div class="container marketing">
+    	<h2>Related Articles</h2>
+    	{% include 'modular/articles-3-columns.html.twig' %}
+    </div>
+{% endblock %}

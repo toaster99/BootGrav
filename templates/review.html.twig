@@ -10,19 +10,29 @@
 
 
 {% block content %}
-	{% if page.header.featured_image %}
-		<div class="review_header"data-parallax="scroll" data-image-src="{{ page.media[page.header.featured_image].url }}">
+{% if page.header.featured_image %}
+	<div class="review_header"data-parallax="scroll" data-image-src="{{ page.media[page.header.featured_image].url }}">
 
-				<div class="container review_header_container">
-					<div class="review_header_content">
-						<h1>
-							<small>Title of the stuff</small><br/>
-							This is a test
-						</h1>
-					</div>
+			<div class="container review_header_container">
+				<div class="review_header_content">
+					<h1>
+						<small>{{ page.header.article_page_tagline }}</small><br/>
+						{{ page.header.title }}
+					</h1>
 				</div>
+			</div>
+	</div>
+{% else %}
+	<div class="review_title_container">
+		<div class="container">
+			<h1>
+				<small>{{ page.header.article_page_tagline }}</small>
+				<br/>
+				{{ page.title }}
+			</h1>
 		</div>
-	{% endif %}
+	</div>
+{% endif %}
 	<div class="container review_content">
     	{{ page.content }}
     </div>

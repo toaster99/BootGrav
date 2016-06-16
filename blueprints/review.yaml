@@ -19,7 +19,10 @@ form:
               label: Featured Image
               type: pagemediaselect
             header.tagline:
-              label: Tagline Text
+              label: Tagline Text (shown in listings)
+              type: text
+            header.article_page_tagline:
+              label: Header Tagline (shown on the article page)
               type: text
             header.rating:
               label: Rating (out of 3)

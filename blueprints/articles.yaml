@@ -1,0 +1,20 @@
+title: Review
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        article:
+          type: tab
+          title: Page Options
+
+          fields:
+            header.tagline:
+              label: Tagline Text
+              type: text

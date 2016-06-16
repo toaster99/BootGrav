@@ -1,0 +1,33 @@
+/* Article Page Styles */
+
+.articles_title_container
+{
+  margin-bottom: 5em;
+  padding: 2em 0;
+
+}
+
+
+.articles_title_container h1 {
+  color: #5D576B;
+  margin-top: 0px;
+}
+
+.articles_title_container p {
+  color: #5D576B !important;
+}
+
+@media(min-width: 768px)
+{
+  .articles_title_container {
+    background-color: #8884FF;
+  }
+
+  .articles_title_container h1 {
+    color: white;
+  }
+
+  .articles_title_container p {
+    color: white !important;
+  }
+}
