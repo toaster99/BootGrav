@@ -1,0 +1,28 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block specific_includes %}
+	{% do assets.add('theme://js/parallax.min.js') %}
+	{% do assets.add('theme://js/review.js') %}
+	{{ assets.js() }}
+{% endblock %}
+
+
+
+
+{% block content %}
+		<div class="review_title_container">
+			<div class="container">
+				<h1>
+					Oh no!<br />
+          <small>We can't find that page!</small>
+				</h1>
+			</div>
+		</div>
+
+	<div class="container">
+      <center>
+        <h2>Maybe Corgi can help you find your way!</h2>
+        <img src="{{ theme_url}}/assets/404_corgi.jpg" style="max-height:30em;" class="img-responsive"/>
+      </center>
+    </div>
+{% endblock %}

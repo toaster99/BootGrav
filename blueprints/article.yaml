@@ -1,0 +1,32 @@
+title: Review
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        article:
+          type: tab
+          title: Article Options
+
+          fields:
+            header.featured_image:
+              label: Featured Image
+              type: pagemediaselect
+            header.featured_image_header:
+              label: Featured Image (Article Header)
+              type: pagemediaselect
+            header.tagline:
+              label: Tagline Text (shown in listings)
+              type: text
+            header.article_page_tagline:
+              label: Header Tagline (shown on the article page)
+              type: text
+            header.quick_summary:
+              label: Summary
+              type: textarea

@@ -3,7 +3,7 @@
 <div class="container">
 	<div class="row">
 		{# Main Content Area #}
-		<div class="col-md-8">
+		<div class="col-md-9">
 		{% for module in page.collection() %}
 	        {# {% if module.header.title|contains('Slider')%} #}
 	        {{ module.content }}
@@ -11,7 +11,16 @@
 	    {% endfor %}
 		</div>
 		{# Sidebar Content #}
-		<div class="col-md-4">
+		<div class="col-md-3">
+			<!-- Search Box -->
+			<h3>Search</h3>
+			{% include 'partials/simplesearch_searchbox.html.twig' %}
+			<!-- Categories Listing -->
+			<h3>Categories</h3>
+			{% include 'partials/categories.html.twig' %}
+			<!-- Ads holder (sorry, need to make money somehow!) -->
+			<h3>Paying the Bills</h3>
+			{% include 'partials/adsense-sidebar.html.twig' %}
 		</div>
 	</div>
 </div>

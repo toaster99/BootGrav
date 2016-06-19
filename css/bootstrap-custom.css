@@ -12,12 +12,17 @@ body
 h1
 {
 	font-size: 3em;
+	font-weight: bolder;
 }
 
 h2
 {
 	font-weight: bolder;
-	margin-bottom: 1em;
+	margin-bottom: 2em;
+}
+
+h2 small {
+	text-transform: uppercase;
 }
 
 h3
@@ -34,7 +39,8 @@ h3 small {
 
 h4
 {
-	font-size: 1.0em;
+	font-size: 1.3em;
+	margin-bottom: 2em;
 }
 
 p
