@@ -18,6 +18,9 @@ form:
             header.featured_image:
               label: Featured Image
               type: pagemediaselect
+            header.featured_image_header:
+              label: Featured Image (Article Header)
+              type: pagemediaselect
             header.tagline:
               label: Tagline Text (shown in listings)
               type: text

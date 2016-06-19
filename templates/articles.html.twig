@@ -8,15 +8,24 @@
 		<h1>
 			{{ page.title }}
 		</h1>
-		{% if page.content %}
-			{{ page.content }}
+		{% if page.header.tagline %}
+			<p>
+				{{ page.header.tagline }}
+			</p>
 		{% endif %}
 	</div>
 </div>
 {% endif %}
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-9">
+				{% if not page.collection %}
+					<h3>We're just getting started!<br/>
+
+
+					<small>Looks like we don't have any articles in this category yet, please come back later!</small>
+				</h3>
+				{% endif %}
 				{% set collection = page.collection %}
 				{% for page in collection %}
 					<div class="row article_row">
@@ -35,7 +44,7 @@
 									<small>{{ page.header.tagline }}</small><br/>
 								{%endif %}
 
-								<a href="{{ page.title }}">
+								<a href="{{ page.url(true) }}">
 									{{ page.title }}
 								</a>
 							</h3>
@@ -58,8 +67,16 @@
 						{% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
 				{% endif %}
 			</div>
-			<div class="col-md-4">
-				World
+			<div class="col-md-3 articles-sidebar">
+				<!-- Search Box -->
+				<h3>Search</h3>
+				{% include 'partials/simplesearch_searchbox.html.twig' %}
+				<!-- Categories Listing -->
+				<h3>Categories</h3>
+				{% include 'partials/categories.html.twig' %}
+				<!-- Ads holder (sorry, need to make money somehow!) -->
+				<h3>Paying the Bills</h3>
+				{% include 'partials/adsense-sidebar.html.twig' %}
 			</div>
 		</div>
 	</div>

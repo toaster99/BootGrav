@@ -34,10 +34,19 @@
 
 .logo_container > h1
 {
+	font-weight: normal;
 	font-size: 2em;
-	padding: 0 0 0 .5em;
+	padding: 0 0 0 .2em;
 	margin: 0;
 	color: white;
+	font-family: 'Work Sans', sans-serif !important;
+	font-weight: 900;
+	text-transform: lowercase;
+}
+
+.logo_container > i {
+	color: white;
+	font-size: 2.5em;
 }
 
 @media(min-width: 768px)
@@ -46,11 +55,18 @@
 	{
 		color: rgb(93, 87, 107);
 	}
+
+	.logo_container > i
+	{
+		color: rgb(93, 87, 107);
+	}
 }
 
 /* Hamburger Icon */
-#hamburger_col
+.hamburger_col
 {
+	text-align: right;
+	flex-grow: 2;
 }
 
 #hamburger_icon
@@ -67,6 +83,7 @@
 	font-weight: bold;
 	display: flex;
 	font-size: 1.2em;
+	margin: 0;
 }
 
 .navigation_col ul > li {

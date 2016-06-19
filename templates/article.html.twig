@@ -10,8 +10,8 @@
 
 
 {% block content %}
-	{% if page.header.featured_image %}
-		<div class="review_header"data-parallax="scroll" data-image-src="{{ page.media[page.header.featured_image].url }}">
+	{% if page.header.featured_image_header %}
+		<div class="review_header"data-parallax="scroll" data-image-src="{{ page.media[page.header.featured_image_header].url }}">
 
 				<div class="container review_header_container">
 					<div class="review_header_content">
@@ -28,11 +28,6 @@
 				<h1>
 					{{ page.title }}
 				</h1>
-				{% if page.header.article_page_tagline %}
-					<p>
-						{{ page.header.article_page_tagline }}
-					</p>
-				{% endif %}
 			</div>
 		</div>
 	{% endif %}
@@ -40,8 +35,10 @@
 	<div class="container review_content">
     	{{ page.content }}
     </div>
-    <div class="container marketing">
-    	<h2>Related Articles</h2>
-    	{% include 'modular/articles-3-columns.html.twig' %}
-    </div>
+		{% if page.collection %}
+	    <div class="container marketing">
+	    	<h2>Related Articles</h2>
+	    	{% include 'modular/articles-3-columns.html.twig' %}
+	    </div>
+		{% endif %}
 {% endblock %}

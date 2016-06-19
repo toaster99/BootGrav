@@ -43,7 +43,7 @@
 
 .review_header_container h1 > small
 {
-	color: white;
+	color: white !important;
 }
 
 /* Alternative header styles (without image) */
@@ -90,13 +90,15 @@
 	display: block;
 	width: 100%;
 	height: auto;
+	margin: 2em 0;
 }
 
-/*.review_content .inline-float-left
+.review_content .inline-float-left
 {
 	display: block;
 	width: 100%;
 	height: auto;
+	border-radius: 0px;
 }
 
 .review_content .inline-float-right
@@ -104,6 +106,7 @@
 	display: block;
 	width: 100%;
 	height: auto;
+	border-radius: 0px;
 }
 
 .review_content .inline-full-width
@@ -112,7 +115,10 @@
 	width: 100%;
 	height: auto;
 	margin: .5em 0;
-}*/
+	border-radius: 0px;
+	margin: 2em 0;
+
+}
 
 /* Styles for review content text */
 .review_content h2
@@ -268,6 +274,11 @@
 
 @media(min-width: 768px)
 {
+	.review_summary_row
+	{
+		flex-wrap: nowrap;
+	}
+
 	.review_summary
 	{
 		background-color: #8884FF;
@@ -306,26 +317,31 @@
 	{
 		display: inline-block;
 		float: left;
-		max-width: 40%;
+		max-width: 35%;
 		height: auto;
-		margin: .5em .5em 1em 0;
+		margin: 2em 2em 2em 0;
 	}
 
-	/*.review_content .inline-float-left
+	.review_content .inline-float-left
 	{
 		display: inline-block;
 		float: left;
-		max-width: 40%;
+		max-width: 30%;
 		height: auto;
+		margin: 2em 2em 2em 0;
+
+
 	}
 
 	.review_content .inline-float-right
 	{
 		display: inline-block;
 		float: right;
-		max-width: 40%;
+		max-width: 30%;
 		height: auto;
-	}*/
+		margin: 2em 0em 2em 2em;
+
+	}
 
 	.review_summary ul
 	{

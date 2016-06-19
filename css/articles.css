@@ -20,7 +20,7 @@
 @media(min-width: 768px)
 {
   .articles_title_container {
-    background-color: #8884FF;
+  background-color: #8884FF;
   }
 
   .articles_title_container h1 {
@@ -30,4 +30,9 @@
   .articles_title_container p {
     color: white !important;
   }
+}
+
+.articles-sidebar > h3:first-of-type
+{
+  margin-top: 0px;
 }

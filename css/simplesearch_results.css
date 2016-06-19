@@ -1,0 +1,47 @@
+/* Header Styles */
+
+.searchresults_title_container
+{
+  margin-bottom: 3em;
+  padding: 2em 0;
+
+}
+
+
+.searchresults_title_container h1 {
+  color: #5D576B;
+  margin-top: 0px;
+  margin-bottom: .5em;
+}
+
+.searchresults_title_container p {
+  color: #5D576B !important;
+}
+
+@media(min-width: 768px)
+{
+  .searchresults_title_container {
+    background-color: #8884FF;
+  }
+
+  .searchresults_title_container h1 {
+    color: white;
+  }
+
+  .searchresults_title_container p {
+    color: white !important;
+  }
+}
+
+/* Body */
+.search-results-container {
+  overflow: hidden;
+}
+
+.search-row p > img {
+  display: none;
+}
+
+.search-row h2 {
+  display: none;
+}
