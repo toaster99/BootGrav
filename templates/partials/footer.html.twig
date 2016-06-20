@@ -10,22 +10,27 @@
     		<div class="col-sm-4">
     			<h3>Home</h3>
     			<ul>
-    				<li><a href="#">Review 1</a></li>
-    				<li><a href="#">Review 2</a></li>
-    				<li><a href="#">Review 3</a></li>
+            {% for page in pages.children %}
+              {% if (page.visible) and not (page.menu == "Home") %}
+    				      <li><a href="{{ page.url }}">{{ page.menu }}</a></li>
+              {% endif %}
+            {% endfor %}
     			</ul>
     		</div>
     		<div class="col-sm-4">
     			<h3>Contact</h3>
     			<ul>
-    				<li><a href="#">Comments/Suggestions</a></li>
-    				<li><a href="#">Advertising</a></li>
-    				<li><a href="#">Send Us Something to Review!</a></li>
+    				<li><a href="/grav_imported_reviews/comments-and-suggestions">Comments/Suggestions</a></li>
+    				<li><a href="/grav_imported_reviews/advertising">Advertising</a></li>
+    				<li><a href="/grav_imported_reviews/product-reviews">Send Us Something to Review!</a></li>
     			</ul>
     		</div>
     		<div class="col-sm-4">
     			<h3>About</h3>
-    				<p>We are the top reviewers of international tech products!</p>
+            <ul>
+              <li>{{ site.metadata.description }}</li>
+
+            </ul>
     			<ul>
     			</ul>
     		</div>

@@ -46,7 +46,7 @@ h4
 p
 {
 	font-size: 1.3em;
-	line-height: 1.5em;
+	line-height: 1.8em;
 	color: #5D576B;
 }
 
@@ -63,6 +63,11 @@ p
 	.container
 	{
 		font-size: 13px;
+	}
+	p
+	{
+		font-size: 1.5em;
+		line-height: 1.8em;
 	}
 }
 

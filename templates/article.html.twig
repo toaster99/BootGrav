@@ -26,6 +26,9 @@
 		<div class="review_title_container">
 			<div class="container">
 				<h1>
+					{% if page.header.article_page_tagline %}
+						<small>{{ page.header.article_page_tagline }}</small><br/>
+					{% endif %}
 					{{ page.title }}
 				</h1>
 			</div>
@@ -37,7 +40,7 @@
     </div>
 		{% if page.collection %}
 	    <div class="container marketing">
-	    	<h2>Related Articles</h2>
+	    	<h3>Related Articles</h3>
 	    	{% include 'modular/articles-3-columns.html.twig' %}
 	    </div>
 		{% endif %}

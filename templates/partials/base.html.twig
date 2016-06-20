@@ -5,17 +5,37 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        {% if header.description %}
-            <meta name="description" content="{{ header.description }}">
+        {% if page.header.quick_summary %}
+            <meta name="description" content="{{ page.header.quick_summary }}">
         {% else %}
-            <meta name="description" content="{{ site.description }}">
+            <meta name="description" content="{{ site.metadata.description }}">
         {% endif %}
         {% if header.robots %}
             <meta name="robots" content="{{ header.robots }}">
         {% endif %}
-        <link rel="icon" type="image/png" href="{{ theme_url }}/images/favicon.png">
+
+        {% if page.taxonomy.tag %}
+          <meta name="keywords" content="{% for tag in page.taxonomy.tag %}{{tag}},{% endfor %}">
+        {% else %}
+          <meta name="keywords" content="{{ site.metadata.keywords }}">
+        {% endif %}
+
+        <link rel="shortcut icon" type="image/png" href="/{{ theme_url }}/images/favicon.png">
 
         <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
+
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-58825605-4', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+
 
         {% block stylesheets %}
             {# Bootstrap core CSS #}
