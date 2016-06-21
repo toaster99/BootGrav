@@ -2,9 +2,16 @@
 
 .articles_title_container
 {
-  margin-bottom: 5em;
+  margin-bottom: 0em;
   padding: 2em 0;
 
+}
+
+.articles_page_container hr
+{
+	background-color: #5D576B !important;
+	margin: 3em 0 !important;
+	height: 1px;
 }
 
 
@@ -21,6 +28,7 @@
 {
   .articles_title_container {
   background-color: #8884FF;
+  margin-bottom: 5em;
   }
 
   .articles_title_container h1 {

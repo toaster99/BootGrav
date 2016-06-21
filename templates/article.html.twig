@@ -1,11 +1,4 @@
-{% extends 'partials/base.html.twig' %} 
-
-{% block specific_includes %}
-	{% do assets.add('theme://js/parallax.min.js') %}
-	{% do assets.add('theme://js/review.js') %}
-	{{ assets.js() }}
-{% endblock %}
-
+{% extends 'partials/base.html.twig' %}
 
 
 
@@ -26,10 +19,10 @@
 		<div class="review_title_container">
 			<div class="container">
 				<h1>
-					{% if page.header.article_page_tagline %}
-						<small>{{ page.header.article_page_tagline }}</small><br/>
-					{% endif %}
 					{{ page.title }}
+					{% if page.header.article_page_tagline %}<br/>
+						<small>{{ page.header.article_page_tagline }}</small>
+					{% endif %}
 				</h1>
 			</div>
 		</div>

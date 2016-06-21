@@ -9,13 +9,22 @@
 
 .article_listing_container hr
 {
-	background-color: #D7BCE8;
+	background-color: #5D576B;
+	margin: 3em 0 !important;
 	height: 1px;
 }
 
 .article_row
 {
-	margin-bottom: 5em;
+	margin-bottom: 0em;
+}
+
+@media(min-width: 768px)
+{
+	.article_row
+	{
+			margin-bottom: 5em;
+	}
 }
 
 /* Font Options */

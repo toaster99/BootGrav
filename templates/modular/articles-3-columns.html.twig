@@ -1,13 +1,6 @@
 {# {% set background_image = page.media['background.jpg'] %}
 {% set css = page.header.styles %} #}
 
-{% do assets.add('theme://css/slick.css',100) %}
-{% do assets.add('theme://js/slick.min.js') %}
-{% do assets.add('theme://js/articles-3-columns.js') %}
-
-{{ assets.css() }}
-{{ assets.js() }}
-
 <div class="container featured_reviews_container">
 	{% if page.header.modular_title %}
 		<h2 class=" hidden-xs">
