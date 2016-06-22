@@ -93,6 +93,14 @@
 	    	</div>
 	    </div>
     </div>
+
+		{% if config.plugins.jscomments.enabled %}
+			<div class="container comments-container">
+				<h3>Comments</h3>
+				  {{ jscomments() }}
+			</div>
+		{% endif %}
+
 		{% if page.collection %}
 	    <div class="container marketing">
 	    	<h3>Related Articles</h3>
