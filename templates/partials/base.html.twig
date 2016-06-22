@@ -2,22 +2,34 @@
 <html lang="en">
 <head>
     {% block head %}
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         {% if page.header.quick_summary %}
-            <meta name="description" content="{{ page.header.quick_summary }}">
+            <meta name="description" content="{{ page.header.quick_summary }}"/>
         {% else %}
-            <meta name="description" content="{{ site.metadata.description }}">
+            <meta name="description" content="{{ site.metadata.description }}"/>
         {% endif %}
         {% if header.robots %}
-            <meta name="robots" content="{{ header.robots }}">
+            <meta name="robots" content="{{ header.robots }}"/>
         {% endif %}
 
         {% if page.taxonomy.tag %}
-          <meta name="keywords" content="{% for tag in page.taxonomy.tag %}{{tag}},{% endfor %}">
+          <meta name="keywords" content="{% for tag in page.taxonomy.tag %}{{tag}},{% endfor %}"/>
         {% else %}
-          <meta name="keywords" content="{{ site.metadata.keywords }}">
+          <meta name="keywords" content="{{ site.metadata.keywords }}"/>
+        {% endif %}
+
+
+        <meta property="og:url" content="{{page.url(true)}}"  />
+        {% if page.title %}
+          <meta property="og:title" content="{{ page.title }}"  />
+        {% endif %}
+        {% if page.header.quick_summary %}
+          <meta property="og:description" content="{{ page.header.quick_summary }}"  />
+        {% endif %}
+        {% if page.header.featured_image %}
+          <meta property="og:image" content="{{ page.media[page.header.featured_image].url(true) }}"  />
         {% endif %}
 
         <link rel="icon" type="image/png" href="{{ theme_url }}/images/favicon.png">

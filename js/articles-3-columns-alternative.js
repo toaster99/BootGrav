@@ -4,9 +4,9 @@ $(document).ready(function()
 		  dots: true,
 		  arrows: false,
 		  infinite: true,
-		  speed: 300,
+		  speed: 500,
 		  autoplay: true,
-		  autoplaySpeed: 3000,
+		  autoplaySpeed: 3500,
 		  slidesToShow: 3,
 		  slidesToScroll: 3,
 		  responsive: [

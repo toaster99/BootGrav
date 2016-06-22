@@ -19,7 +19,7 @@ h1
 h2
 {
 	font-weight: bolder;
-	margin-bottom: 2em;
+	margin: 0;
 }
 
 h2 small {
@@ -56,6 +56,11 @@ p
 	.container
 	{
 		font-size: 14px;
+	}
+
+	h2
+	{
+		margin-bottom: 2em;
 	}
 }
 

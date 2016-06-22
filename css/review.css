@@ -91,7 +91,7 @@
 	display: block;
 	width: 100%;
 	height: auto;
-	margin: 2em 0;
+	margin: 2em 0 2em 0;
 }
 
 .review_content .inline-float-left
@@ -124,7 +124,7 @@
 /* Styles for review content text */
 .review_content h2
 {
-	margin-bottom: .5em;
+	margin: 2em 0 .5em 0;
 	clear: both;
 }
 
@@ -191,7 +191,7 @@
 
 .review_summary .rating_star_filled:before
 {
-	color: white;
+	color: #8884FF;
 }
 
 .review_summary .rating_star_empty:before
@@ -335,7 +335,7 @@
 		float: left;
 		max-width: 35%;
 		height: auto;
-		margin: 2em 2em 2em 0;
+		margin: .5em 2em 2em 0;
 	}
 
 	.review_content .inline-float-left
