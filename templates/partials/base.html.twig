@@ -6,9 +6,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         {% if page.header.quick_summary %}
-            <meta name="description" content="{{ page.header.quick_summary }}"/>
+            <meta name="description" content="{{ page.header.quick_summary|escape }}"/>
         {% else %}
-            <meta name="description" content="{{ site.metadata.description }}"/>
+            <meta name="description" content="{{ site.metadata.description|escape }}"/>
         {% endif %}
         {% if header.robots %}
             <meta name="robots" content="{{ header.robots }}"/>
@@ -26,10 +26,10 @@
           <meta property="og:title" content="{{ page.title }}"  />
         {% endif %}
         {% if page.header.quick_summary %}
-          <meta property="og:description" content="{{ page.header.quick_summary }}"  />
+          <meta property="og:description" content="{{ page.header.quick_summary|escape }}"  />
         {% endif %}
         {% if page.header.featured_image %}
-          <meta property="og:image" content="{{ page.media[page.header.featured_image].url(true) }}"  />
+          <meta property="og:image" content="{{ base_url_absolute }}{{ page.media[page.header.featured_image].url(true) }}"  />
         {% endif %}
 
         <link rel="icon" type="image/png" href="{{ theme_url }}/images/favicon.png">
