@@ -20,17 +20,40 @@
           <meta name="keywords" content="{{ site.metadata.keywords }}"/>
         {% endif %}
 
+        <!-- Schema.org markup for Google+ -->
+        <meta itemprop="name" content="{{ page.title }}">
+        <meta itemprop="description" content="{{ page.header.quick_summary|escape }}">
+        {% if page.header.featured_image %}
+          <meta itemprop="image" content="{{ base_url_absolute }}{{ page.media[page.header.featured_image].url(true) }}"  />
+        {% endif %}
 
-        <meta property="og:url" content="{{page.url(true)}}"  />
-        {% if page.title %}
-          <meta property="og:title" content="{{ page.title }}"  />
+        <!-- Twitter Card data -->
+        <meta name="twitter:site" content="@importedreviews">
+        <meta name="twitter:title" content="{{ page.title }}">
+        <meta name="twitter:description" content="{{ page.header.quick_summary|escape }}">
+        <meta name="twitter:creator" content="@importedreviews">
+        <!-- Twitter summary card with large image must be at least 280x150px -->
+        {% if page.header.featured_image %}
+          <meta property="twitter:image:src" content="{{ base_url_absolute }}{{ page.media[page.header.featured_image].url(true) }}"  />
         {% endif %}
-        {% if page.header.quick_summary %}
-          <meta property="og:description" content="{{ page.header.quick_summary|escape }}"  />
-        {% endif %}
+
+        <!-- Open Graph data -->
+        <meta property="og:title" content="{{ page.title }}" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="{{page.url(true)}}" />
         {% if page.header.featured_image %}
           <meta property="og:image" content="{{ base_url_absolute }}{{ page.media[page.header.featured_image].url(true) }}"  />
         {% endif %}
+        <meta property="og:description" content="{{ page.header.quick_summary|escape }}" />
+        <meta property="og:site_name" content="{{ site.title }}" />
+
+
+
+
+
+
+
+
 
         <link rel="icon" type="image/png" href="{{ theme_url }}/images/favicon.png">
         <link rel="shortcut icon" href="{{ theme_url }}/images/favicon.ico">

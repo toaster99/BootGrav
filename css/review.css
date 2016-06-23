@@ -219,6 +219,10 @@
 	list-style: none;
 }
 
+.review_summary li {
+	margin: .5em 0;
+}
+
 .review_summary_purchase
 {
 	flex-grow: 1;
@@ -285,6 +289,11 @@
 
 @media(min-width: 768px)
 {
+	.review_summary li {
+		margin:0;
+	}
+
+
 	.review_summary .rating_star_empty:before
 	{
 			color: #D7BCE8;
