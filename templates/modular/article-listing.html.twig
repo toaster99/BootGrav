@@ -33,6 +33,11 @@
 
 						{{ page.title }}
 				</h3>
+				{% if page.date %}
+					<h6>
+						{{ page.date|date("F jS, Y") }}
+					</h6>
+				{% endif %}
 				{% if page.header.rating %}
 					{% for i in 1..page.header.rating %}
 						<span class="rating_star_filled"></span>

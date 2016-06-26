@@ -34,6 +34,9 @@ form:
                 type: int
                 min: 0
                 max: 3
+            header.author_name:
+              label: Author Name
+              type: text
             header.quick_summary:
               label: Summary
               type: textarea

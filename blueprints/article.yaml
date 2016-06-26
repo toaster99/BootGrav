@@ -30,3 +30,6 @@ form:
             header.quick_summary:
               label: Summary
               type: textarea
+            header.author_name:
+              label: Author Name
+              type: text

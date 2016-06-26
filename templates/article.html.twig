@@ -30,6 +30,11 @@
 	{% endif %}
 
 	<div class="container review_content">
+		{% if page.date %}
+			<h6>
+				Published on {{ page.date|date("F jS, Y") }}{% if page.header.author_name %} by {{ page.header.author_name }}{% endif %}
+			</h6>
+		{% endif %}
     	{{ page.content }}
     </div>
 		<div class="container ad_container_article">
